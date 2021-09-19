@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>All Audio Question</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .activeword {
+            color: rgb(128, 128, 128);
+        }
+
+        .disableactiveword {
+            color: "#e5e5e5";
+        }
+
+        .ZN0_O {
+            padding: 12px 16px;
+        }
+
+        ._1HcF0 {
+            background: none;
+            border-radius: 16px;
+            border: solid transparent;
+            border-width: 2px 2px 4px;
+            color: #4b4b4b;
+            cursor: pointer;
+            flex-shrink: 0;
+            font-weight: 500;
+            transform: translateZ(0);
+            transition: -webkit-filter .2s;
+            transition: filter .2s;
+            transition: filter .2s, -webkit-filter .2s;
+        }
+
+        .VAUNo {
+            font-size: 19px;
+        }
+
+        ._2T0K5 {
+            height: 60px;
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+
+        .zVWkL {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        button {
+            box-sizing: inherit;
+            font-family: din-round, sans-serif;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        ._1HcF0:after {
+            background-clip: padding-box;
+            background-color: #fff;
+            border-radius: 16px;
+            border: solid #e5e5e5;
+            border-width: 2px 2px 4px;
+            bottom: -4px;
+            content: "";
+            left: -2px;
+            position: absolute;
+            right: -2px;
+            top: -2px;
+            z-index: -1;
+        }
+
+        .m3XTx {
+            border-width: 4px 2px 2px;
+            color: transparent !important;
+            cursor: default !important;
+            pointer-events: none;
+        }
+
+        ._2OVuy {
+            border-width: 4px 2px 2px;
+            color: #e5e5e5;
+        }
+
+        .m3XTx:after {
+            background-clip: border-box;
+            background-color: #e5e5e5 !important;
+            border-bottom-width: 2px;
+            border-color: transparent !important;
+            bottom: -2px;
+        }
+
+        ._2OVuy:after {
+            border-bottom-width: 2px;
+            bottom: -2px;
+        }
+
+        ._1obm2 {
+            flex-basis: 140px;
+        }
+
+        ._1obm2 {
+            position: relative;
+            z-index: 110;
+        }
+
+        ._2G_Xe {
+            grid-column: auto/2;
+            justify-self: start;
+        }
+
+
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        .button:hover {
+            background-color: #3e8e41
+        }
+
+        .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .buttonCancel {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #999;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #4CAF50;
+        }
+
+        .buttonCancel:hover {
+            background-color: #4b4b4b;
+        }
+
+        .buttonCancel:active {
+            background-color: #666;
+            box-shadow: 0 5px #3e8e41;
+            transform: translateY(4px);
+        }
+
+        .outerDiv {
+            /* background-color: #006699;
+            color: #fff;
+            height: 400px; */
+            width: 800px;
+            margin: 0px auto;
+            padding: 5px;
+            margin-top: 150px;
+        }
+
+        .leftDiv {
+            /* background-color: #efefef;
+            color: #000; */
+            height: 150px;
+            width: 48%;
+            float: left;
+        }
+
+        .rightDiv {
+            /* background-color: #efefef;
+            color: #000; */
+            height: 150px;
+            width: 48%;
+            float: right;
+        }
+
+        ._1HcF0_click_first {
+            background: none;
+            border-radius: 16px;
+            border: solid transparent;
+            border-width: 2px 2px 4px;
+            color: #4b4b4b;
+            cursor: pointer;
+            flex-shrink: 0;
+            font-weight: 500;
+            transform: translateZ(0);
+            transition: -webkit-filter .2s;
+            transition: filter .2s;
+            transition: filter .2s, -webkit-filter .2s;
+        }
+
+        ._1HcF0_click_first:after {
+            background-clip: padding-box;
+            background-color: rgb(222, 237, 247);
+            /*     chnage */
+            border-radius: 16px;
+            border: solid #0ABDE3;
+            /* change */
+            border-width: 2px 2px 4px;
+            bottom: -4px;
+            content: "";
+            left: -2px;
+            position: absolute;
+            right: -2px;
+            top: -2px;
+            z-index: -1;
+        }
+
+        ._1HcF0_failure {
+            background: none;
+            border-radius: 16px;
+            border: solid transparent;
+            border-width: 2px 2px 4px;
+            color: #4b4b4b;
+            cursor: pointer;
+            flex-shrink: 0;
+            font-weight: 500;
+            transform: translateZ(0);
+            transition: -webkit-filter .2s;
+            transition: filter .2s;
+            transition: filter .2s, -webkit-filter .2s;
+        }
+
+        ._1HcF0_failure:after {
+            background-clip: padding-box;
+            background-color: #ffc1c1;
+            border-radius: 16px;
+            border: solid #ea2b2b;
+            border-width: 2px 2px 4px;
+            bottom: -4px;
+            content: "";
+            left: -2px;
+            position: absolute;
+            right: -2px;
+            top: -2px;
+            z-index: -1;
+        }
+
+        ._1HcF0_success {
+            background: none;
+            border-radius: 16px;
+            border: solid transparent;
+            border-width: 2px 2px 4px;
+            color: #4b4b4b;
+            cursor: pointer;
+            flex-shrink: 0;
+            font-weight: 500;
+            transform: translateZ(0);
+            transition: -webkit-filter .2s;
+            transition: filter .2s;
+            transition: filter .2s, -webkit-filter .2s;
+        }
+
+        ._1HcF0_success:after {
+            background-clip: padding-box;
+            background-color: #b8f28b;
+            border-radius: 16px;
+            border: solid #58a700;
+            border-width: 2px 2px 4px;
+            bottom: -4px;
+            content: "";
+            left: -2px;
+            position: absolute;
+            right: -2px;
+            top: -2px;
+            z-index: -1;
+        }
+
+        ._1HcF0_success_disable {
+            background: none;
+            border-radius: 16px;
+            border: solid transparent;
+            border-width: 2px 2px 4px;
+            color: #e5e5e5;
+            cursor: pointer;
+            flex-shrink: 0;
+            font-weight: 500;
+            transform: translateZ(0);
+            transition: -webkit-filter .2s;
+            transition: filter .2s;
+            transition: filter .2s, -webkit-filter .2s;
+        }
+
+        ._1HcF0_success_disable:after {
+            background-clip: padding-box;
+            background-color: #fff;
+            border-radius: 16px;
+            border: solid #e5e5e5;
+            border-width: 2px 2px 4px;
+            bottom: -4px;
+            content: "";
+            left: -2px;
+            position: absolute;
+            right: -2px;
+            top: -2px;
+            z-index: -1;
+        }
+
+        .fa-timesColor {
+            color: red;
+        }
+
+        .fa-checkColor {
+            color: #58a700;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" style="width: 800px;margin: 0 auto;">
+        <!-- simple Audio Question -->
+        <div id="question1" style="font-size: 20px;display: flex;">
+            Audio : He is my grandson
+        </div>
+        <div id="question2" style="font-size: 20px;display: none;">
+            Audio : Alia is good girl.
+        </div>
+        <div id="question3" style="font-size: 20px;display: none;">
+            Audio : This is James Bond
+        </div>
+        <!-- Pair Audio Question -->
+        <div id="question4" style="font-size: 20px;display: none;">
+            Pair : He is my grandson
+        </div>
+        <div id="question5" style="font-size: 20px;display: none;">
+            Pair : Alia is good girl.
+        </div>
+        <div id="question6" style="font-size: 20px;display: none;">
+            Pair : This is James Bond
+        </div>
+        <!-- Type Audio Question -->
+        <div id="question7" style="font-size: 20px;display: none;">
+            Type : He is my grandson
+        </div>
+        <div id="question8" style="font-size: 20px;display: none;">
+            Type : Alia is good girl.
+        </div>
+        <div id="question9" style="font-size: 20px;display: none;">
+            Type : This is James Bond
+        </div>
+        <!-- Pair Audio Question -->
+        <div id="question10" style="font-size: 20px;display: none;">
+            Pair : He is my grandson
+        </div>
+        <!-- simple Audio Question -->
+        <div id="question11" style="font-size: 20px;display: none;">
+            Audio : He is my grandson
+        </div>
+        <!-- Type Audio Question -->
+        <div id="question12" style="font-size: 20px;display: none;">
+            Type : He is my grandson
+        </div>
+
+        <!-- Audio Ans -->
+        <input type="hidden" id="answer1" value="This is James Bond" />
+        <input type="hidden" id="answer2" value="This is James Bond" />
+        <input type="hidden" id="answer3" value="This is James Bond" />
+        <!-- Pair Ans -->
+        <input type="hidden" id="answer4" value="A,Apple,B,Ball,C,Cat,D,Dog,E,Elephant" />
+        <input type="hidden" id="answer5" value="1+1,2,4+4,8,5*10,50,100/5,20,-10-10,-20" />
+        <input type="hidden" id="answer6"
+            value="PM,Narendra Modi,CM,Vijay Rupani,Current President,Ram Nath Kovind,Former President,Dr. A. P. J. Abdul Kalam" />
+        <!-- Type Ans -->
+        <input type="hidden" id="answer7" value="This is James Bond" />
+        <input type="hidden" id="answer8" value="This is James Bond" />
+        <input type="hidden" id="answer9" value="This is James Bond" />
+        <!-- Pair Ans -->
+        <input type="hidden" id="answer10" value="A,Apple,B,Ball,C,Cat,D,Dog,E,Elephant" />
+        <!-- Audio Ans -->
+        <input type="hidden" id="answer11" value="This is James Bond" />
+        <!-- Type Ans -->
+        <input type="hidden" id="answer12" value="This is James Bond" />
+
+        <div style="margin-top: 130px;display: flex;padding: 5px;" id="ans_word">
+
+
+        </div>
+        <hr id="hrLine">
+        <!-- Option word 1-->
+        <div id="option_word1" style="display: flex;padding: 5px;">
+            <input type="hidden" id="option_word_type1" value="Audio Question Answer" />
+            <div class="abc" onclick="divClick(this.id);" id="div_word_1">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_1">This</button></div>
+            </div>
+            <div class="abc" onclick="divClick(this.id);" id="div_word_2">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_2">is</button></div>
+            </div>
+            <div class="abc" onclick="divClick(this.id);" id="div_word_3">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_3">Sherlock</button>
+                </div>
+            </div>
+            <div class="abc" onclick="divClick(this.id);" id="div_word_4">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_4">Holmes</button></div>
+            </div>
+            <div class="abc" onclick="divClick(this.id);" id="div_word_5">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_5">James</button></div>
+            </div>
+            <div class="abc" onclick="divClick(this.id);" id="div_word_6">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_6">Bond</button></div>
+            </div>
+        </div>
+        <!-- Option word 2-->
+        <div id="option_word2" style="padding: 5px;display: none;">
+            <input type="hidden" id="option_word_type2" value="Audio Question Answer" />
+            <div class="abc" onclick="divClick(this.id);" id="div_word_7">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_7">This</button></div>
+            </div>
+            <div class="abc" onclick="divClick(this.id);" id="div_word_8">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_8">is</button></div>
+            </div>
+            <div class="abc" onclick="divClick(this.id);" id="div_word_9">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_9">Dip</button>
+                </div>
+            </div>
+            <div class="abc" onclick="divClick(this.id);" id="div_word_10">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_10">Raj</button></div>
+            </div>
+            <div class="abc" onclick="divClick(this.id);" id="div_word_11">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_11">James</button></div>
+            </div>
+            <div class="abc" onclick="divClick(this.id);" id="div_word_12">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_12">Bond</button></div>
+            </div>
+        </div>
+        <!-- Option word 3-->
+        <div id="option_word3" style="padding: 5px;display: none;">
+            <input type="hidden" id="option_word_type3" value="Audio Question Answer" />
+            <div class="abc" onclick="divClick(this.id);" id="div_word_13">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_13">This</button></div>
+            </div>
+            <div class="abc" onclick="divClick(this.id);" id="div_word_14">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_14">is</button></div>
+            </div>
+            <div class="abc" onclick="divClick(this.id);" id="div_word_15">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_15">Vijay</button>
+                </div>
+            </div>
+            <div class="abc" onclick="divClick(this.id);" id="div_word_16">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_16">Dinanath</button></div>
+            </div>
+            <div class="abc" onclick="divClick(this.id);" id="div_word_17">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_17">James</button></div>
+            </div>
+            <div class="abc" onclick="divClick(this.id);" id="div_word_18">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_18">Bond</button></div>
+            </div>
+        </div>
+        <!-- Option word 4 -->
+        <!-- A,Apple,B,Ball,C,Cat,D,Dog,E,Elephant -->
+        <div id="option_word4" style="display: none;padding: 5px;">
+            <input type="hidden" id="option_word_type4" value="Pair Matching Question Answer" />
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_1">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_1">A</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_2">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_2">Apple</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_3">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_3">B</button>
+                </div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_4">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_4">Ball</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_5">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_5">C</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_6">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_6">Cat</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_7">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_7">D</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_8">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_8">Dog</button></div>
+            </div>
+            <br>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_9">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_9">E</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_10">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_10">Elephant</button></div>
+            </div>
+        </div>
+        <!-- Option word 5 -->
+        <!-- 1+1,2,4+4,8,5*10,50,100/5,20,-10-10,-20 -->
+        <div id="option_word5" style="display: none;padding: 5px;">
+            <input type="hidden" id="option_word_type5" value="Pair Matching Question Answer" />
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_11">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_11">1+1</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_12">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_12">2</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_13">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_13">4+4</button>
+                </div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_14">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_14">8</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_15">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_15">5*10</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_16">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_16">50</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_17">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_17">100/5</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_18">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_18">20</button></div>
+            </div>
+            <br>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_19">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_19">-10-10</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_20">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_20">-20</button></div>
+            </div>
+        </div>
+        <!-- Option word 6 -->
+        <!-- PM,Narendra Modi,CM,Vijay Rupani,Current President,Ram Nath Kovind,Former President,Dr. A. P. J. Abdul Kalam -->
+        <div id="option_word6" style="display: none;padding: 5px;">
+            <input type="hidden" id="option_word_type6" value="Pair Matching Question Answer" />
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_21">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_21">PM</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_22">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_22">Narendra Modi</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_23">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_23">CM</button>
+                </div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_24">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_24">Vijay Rupani</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_25">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_25">Current President</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_26">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_26">Ram Nath Kovind</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_27">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_27">Former President</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_28">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_28">Dr. A. P. J. Abdul Kalam</button></div>
+            </div>
+        </div>
+        <div id="option_word7" style="display: none;">
+            <input type="hidden" id="option_word_type7" value="Type Question Answer" />
+            <input type="text" id="txtAns7" style="width: 600px;" />
+        </div>
+        <div id="option_word8" style="display: none;">
+            <input type="hidden" id="option_word_type8" value="Type Question Answer" />
+            <input type="text" id="txtAns8" style="width: 600px;" />
+        </div>
+        <div id="option_word9" style="display: none;">
+            <input type="hidden" id="option_word_type9" value="Type Question Answer" />
+            <input type="text" id="txtAns9" style="width: 600px;" />
+        </div>
+        <!-- Option word 10 -->
+        <!-- A,Apple,B,Ball,C,Cat,D,Dog,E,Elephant -->
+        <div id="option_word10" style="display: none;padding: 5px;">
+            <input type="hidden" id="option_word_type10" value="Pair Matching Question Answer" />
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_29">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_29">A</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_30">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_30">Apple</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_31">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_31">B</button>
+                </div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_32">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_32">Ball</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_33">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_33">C</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_34">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_34">Cat</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_35">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_35">D</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_36">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_36">Dog</button></div>
+            </div>
+            <br>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_37">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_37">E</button></div>
+            </div>
+            <div class="abc" onclick="divPairClick(this.id);" id="div_word_pair_38">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_pair_38">Elephant</button></div>
+            </div>
+        </div>
+        <!-- Option word 11-->
+        <div id="option_word11" style="display: none;padding: 5px;">
+            <input type="hidden" id="option_word_type11" value="Audio Question Answer" />
+            <div class="abc" onclick="divClick(this.id);" id="div_word_19">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_19">This</button></div>
+            </div>
+            <div class="abc" onclick="divClick(this.id);" id="div_word_20">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_20">is</button></div>
+            </div>
+            <div class="abc" onclick="divClick(this.id);" id="div_word_21">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_21">Sherlock</button>
+                </div>
+            </div>
+            <div class="abc" onclick="divClick(this.id);" id="div_word_22">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_22">Holmes</button></div>
+            </div>
+            <div class="abc" onclick="divClick(this.id);" id="div_word_23">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_23">James</button></div>
+            </div>
+            <div class="abc" onclick="divClick(this.id);" id="div_word_24">
+                <div class="_2T0K5 zVWkL" style="padding: 5px;"><button class="_1HcF0 ZN0_O VAUNo"
+                        id="btn_div_word_24">Bond</button></div>
+            </div>
+        </div>
+        <div id="option_word12" style="display: none;">
+            <input type="hidden" id="option_word_type12" value="Type Question Answer" />
+            <input type="text" id="txtAns12" style="width: 600px;" />
+        </div>
+        <!-- 
+        <div class="outerDiv">
+            <hr>
+            <div class="rightDiv" style="text-align: end;">
+                <button class="button" onclick="onCheck2();">Check</button>
+            </div>
+            <div style:"clear:both;"></div>
+        </div> -->
+        <div class="outerDiv">
+            <hr>
+            <div class="leftDiv">
+                <!-- <button class="buttonCancel" onclick="onCancel();">Cancel</button> -->
+                <i id="wrongFontIcon" class="fa-timesColor fa fa-times-circle-o fa-5x" aria-hidden="true"
+                    style="display: none;"></i>
+                <i id="correctFontIcon" class="fa-checkColor fa fa-check-circle-o fa-5x" aria-hidden="true"
+                    style="display: none;"></i>
+                <div id="correctMessgae" style="display: none;">You are correct.</div>
+                <div id="wrongMessgae" style="display: none;">Correct Answer is:</div>
+                <div id="correctAnsMessage" style="display: none;">This is correct.</div>
+            </div>
+            <div class="rightDiv" style="text-align: end;">
+                <button class="button" id="buttonCheck" onclick="onCheck2();">Check</button>
+            </div>
+            <div style:"clear:both;"></div>
+        </div>
+
+        <div>
+
+
+        </div>
+</body>
+<script>
+    // audio question
+    var ans = document.getElementById('ans_word');
+    var arrData = [];
+
+    // pair question    // condition if first question is pair then show.
+    if (document.getElementById('option_word1')) {
+        var queType = document.getElementById('option_word_type1').value;
+        console.log('queType : ', queType);
+    }
+    var tempPair = document.getElementById('answer4').value;
+    console.log('tempPair :: ', tempPair);
+    var res = tempPair.split(",");
+    console.log("res :: ", res);
+    var arrPairData = [];
+    var temparrPairData = [];
+    var myPairData = {};
+    // for (var index = 0; index < res.length - 1; index = index + 2) {
+    //     myPairData = {};
+    //     myPairData.pairWord = res[index];
+    //     myPairData.pairAns = res[index + 1];
+    //     arrPairData.push(myPairData);
+    //     myPairData = {};
+    //     myPairData.pairWord = res[index + 1];
+    //     myPairData.pairAns = res[index];
+    //     arrPairData.push(myPairData);
+    // }
+
+    // console.log(arrPairData);
+    // //temparrPairData=arrPairData.slice();
+    // console.log('arrPairData length :: ', arrPairData.length);
+
+    var tempArr = [];
+    var tempFirstElementId = "";
+    var buttonEleCheck = "";
+    var temDisplayDivIndex = 1;
+
+    function divPairClick(id) {
+
+        var element = document.getElementById('btn_' + id);
+        console.log(element.innerHTML + " " + 'btn_' + id);
+
+        console.log("temparr :: ", tempArr);
+
+        if (!element.disabled) {
+            if (tempArr.length == 0) {
+                tempArr.push(element.innerHTML);
+                tempFirstElementId = 'btn_' + id;
+                element.classList.remove("_1HcF0");
+                element.classList.add("_1HcF0_click_first");
+            } else if (tempArr.length < 2) {
+                console.log("Fisrt match.. ", tempArr[0]);
+                console.log("Second match.. ", element.innerHTML);
+                var findObject = arrPairData.findIndex(function (arr) { return arr.pairWord.localeCompare(element.innerHTML) == 0 });
+                console.log("findObject :: ", findObject);
+                console.log(arrPairData[findObject].ans);
+
+                if (tempArr[0].localeCompare(arrPairData[findObject].pairAns) == 0) {
+                    // alert('match pair..');
+                    document.getElementById(tempFirstElementId).classList.remove("_1HcF0_click_first");
+                    document.getElementById(tempFirstElementId).classList.add("_1HcF0_success");
+                    element.classList.remove("_1HcF0");
+                    element.classList.add("_1HcF0_success");
+
+                    // after success pair
+                    setTimeout(function () {
+                        document.getElementById(tempFirstElementId).classList.remove("_1HcF0_success");
+                        document.getElementById(tempFirstElementId).classList.add("_1HcF0_success_disable");
+                        element.classList.remove("_1HcF0_success");
+                        element.classList.add("_1HcF0_success_disable");
+                    }, 200);
+
+                    console.log("after success findObject :: ", findObject);
+                    var findObject1 = arrPairData.findIndex(function (arr) { return arr.pairWord.localeCompare(tempArr[0]) == 0 });
+                    console.log("after success findObject1 :: ", findObject1);
+                    // temparrPairData.splice(findObject,1);
+                    // temparrPairData.splice(findObject1,1);
+                    // console.log("arrPairData :: ",arrPairData);
+                    temparrPairData.push(findObject);
+                    temparrPairData.push(findObject1);
+                    console.log("temparrPairData :: ", temparrPairData);
+                    console.log("temparrPairData length:: ", temparrPairData.length);
+
+                    document.getElementById(tempFirstElementId).disabled = true;
+                    element.disabled = true;
+
+                } else {
+                    // alert('wrong pair..');
+                    document.getElementById(tempFirstElementId).classList.remove("_1HcF0_click_first");
+                    document.getElementById(tempFirstElementId).classList.add("_1HcF0_failure");
+                    element.classList.remove("_1HcF0");
+                    element.classList.add("_1HcF0_failure");
+
+                    // after failure pair
+                    setTimeout(function () {
+                        document.getElementById(tempFirstElementId).classList.remove("_1HcF0_failure");
+                        document.getElementById(tempFirstElementId).classList.add("_1HcF0");
+                        element.classList.remove("_1HcF0_failure");
+                        element.classList.add("_1HcF0");
+                    }, 200);
+
+                }
+                tempArr = [];
+
+            }
+        }
+
+    }
+
+    function divClick(id) {
+        var myData = {};
+        var element = document.getElementById('btn_' + id);
+
+        if (!element.disabled) {
+            element.classList.add("m3XTx");
+            element.classList.add("_2OVuy");
+            element.disabled = true;
+
+            // arrData.push(element.innerHTML);
+            // console.log("ArrData :: ", arrData);
+            //console.log(id.slice(4));
+
+            myData.wordIndex = id;
+            myData.data = element.innerHTML;
+            arrData.push(myData);
+            console.log("MyData :: ", myData);
+            console.table("Arr :: ", arrData);
+            ans.innerHTML += "<div onclick=" + "removeClick(this.id) " + "id=" + id.slice(4) + "><div class='_2T0K5 zVWkL' style='padding: 5px;'><button class='_1HcF0 ZN0_O VAUNo'>" + element.innerHTML + "</button></div></div>";
+            //buttonns.innerHTML +="<div onclick="+"removeClick(this.id) "+"id="+ id.slice(4) +">"+document.getElementById(id).innerHTML+"</div>";
+
+        }
+    }
+
+    function removeClick(id) {
+        var enableButton = document.getElementById('btn_div_' + id);
+        enableButton.classList.remove("m3XTx");
+        enableButton.classList.remove("_2OVuy");
+        enableButton.disabled = false;
+
+        var removeElement = document.getElementById(id);
+        removeElement.parentNode.removeChild(removeElement);
+
+        var searchInObjectArray = 'div_' + id;
+        var removeObject = arrData.findIndex(function (arr) { return arr.wordIndex.indexOf(searchInObjectArray) != -1 });
+        console.log('removeObject ::', removeObject);
+
+        arrData.splice(removeObject, 1);
+        console.table("Arr :: ", arrData);
+    }
+
+    function onCheck2() {
+
+        buttonEleCheck = document.getElementById('buttonCheck').innerHTML;
+        console.log('buttonEleCheck :: ', buttonEleCheck);
+        console.log("stringArrAns :: " + stringArrAns);
+        console.log('temDisplayDivIndex :: ' + temDisplayDivIndex);
+
+        if (document.getElementById('buttonCheck').innerHTML.localeCompare('Check') == 0) {
+            console.log('inside check..');
+
+            //  for (var i = 1; i <= 12; i++) {
+            var eleDiv = 'option_word' + temDisplayDivIndex;
+            console.log("eleDiv ", eleDiv);
+            if (document.getElementById(eleDiv).style.display === 'flex') {
+                console.log('==> eleDiv option_word' + temDisplayDivIndex);
+                console.log('==> option_word_type' + temDisplayDivIndex);
+                console.log('queEle :: ', document.getElementById('option_word_type' + temDisplayDivIndex).value);
+                var ansEle = 'answer' + temDisplayDivIndex;
+                console.log('ansEle :: ', document.getElementById(ansEle).value);
+
+                if (document.getElementById('option_word_type' + temDisplayDivIndex).value == 'Audio Question Answer') {
+                    console.log('==> Audio Question Answer found..');
+
+                    var stringArrAns = '';
+                    // alert('onCheck..');
+                    console.log("len :: ", arrData.length);
+                    var j = 1;
+                    for (var val of arrData) {
+                        console.log(val.wordIndex + " ---- " + val.data);
+
+                        if (j == arrData.length)
+                            stringArrAns += val.data;
+                        else
+                            stringArrAns += val.data + " ";
+                        j++;
+                    }
+
+                    var res = document.getElementById(ansEle).value.localeCompare(stringArrAns);
+                    console.log('res :: ', res);
+                    if (res == 0) {
+                        // alert('correct answer..');
+                        // temDisplayDivIndex = i;
+                        // button innerHtml change
+                        document.getElementById('buttonCheck').innerHTML = 'Continue';
+                        // correct icon and message
+                        document.getElementById('correctFontIcon').style.display = 'flex';
+                        document.getElementById('wrongFontIcon').style.display = 'none';
+                        document.getElementById('correctMessgae').style.display = 'flex';
+                        document.getElementById('wrongMessgae').style.display = 'none';
+                        document.getElementById('correctAnsMessage').style.display = 'none';
+
+                        arrData = [];
+                        // document.getElementById('ans_word').innerHTML = "";
+
+                        //  break;
+                    } else {
+                        // alert('wrong answer..');
+                        // wrong icon and message
+                        document.getElementById('wrongFontIcon').style.display = 'flex';
+                        document.getElementById('correctFontIcon').style.display = 'none';
+                        document.getElementById('correctMessgae').style.display = 'none';
+                        document.getElementById('wrongMessgae').style.display = 'flex';
+                        document.getElementById('correctAnsMessage').innerHTML = document.getElementById(ansEle).value
+                        document.getElementById('correctAnsMessage').style.display = 'flex';
+                    }
+
+                } else if (document.getElementById('option_word_type' + temDisplayDivIndex).value == 'Pair Matching Question Answer') {
+                    console.log('==> Pair Matching Question Answer found..');
+                    // display none hr
+                    document.getElementById('hrLine').style.display = 'none';
+
+                    if (temparrPairData.length == arrPairData.length) {
+                        // alert('correct answer..');
+                        // temDisplayDivIndex = i;
+                        // button innerHtml change
+                        document.getElementById('buttonCheck').innerHTML = 'Continue';
+                        // correct icon and message
+                        document.getElementById('correctFontIcon').style.display = 'flex';
+                        document.getElementById('wrongFontIcon').style.display = 'none';
+                        document.getElementById('correctMessgae').style.display = 'flex';
+                        document.getElementById('wrongMessgae').style.display = 'none';
+                        document.getElementById('correctAnsMessage').style.display = 'none';
+                        // break;
+                    } else {
+                        // alert('wrong answer..');
+                        // wrong icon and message
+                        document.getElementById('wrongFontIcon').style.display = 'flex';
+                        document.getElementById('correctFontIcon').style.display = 'none';
+                        document.getElementById('correctMessgae').style.display = 'none';
+                        document.getElementById('wrongMessgae').style.display = 'flex';
+                        document.getElementById('correctAnsMessage').innerHTML = document.getElementById(ansEle).value
+                        document.getElementById('correctAnsMessage').style.display = 'flex';
+                    }
+
+
+                } else if (document.getElementById('option_word_type' + temDisplayDivIndex).value == 'Type Question Answer') {
+                    console.log('==> Type Question Answer found..');
+                    var typeAns = document.getElementById('txtAns' + temDisplayDivIndex).value;
+                    console.log('ansEle :: ', document.getElementById(ansEle).value);
+                    var res = document.getElementById(ansEle).value.localeCompare(typeAns);
+                    console.log('res :: ', res);
+                    if (res == 0) {
+                        //temDisplayDivIndex = i;
+                        // button innerHtml change
+                        document.getElementById('buttonCheck').innerHTML = 'Continue';
+                        // alert('correct answer..');
+                        document.getElementById('ans_word').innerHTML = "";
+
+                        // correct icon and message
+                        document.getElementById('correctFontIcon').style.display = 'flex';
+                        document.getElementById('wrongFontIcon').style.display = 'none';
+                        document.getElementById('correctMessgae').style.display = 'flex';
+                        document.getElementById('wrongMessgae').style.display = 'none';
+                        document.getElementById('correctAnsMessage').style.display = 'none';
+                        // break;
+                    } else {
+                        // alert('wrong answer..');
+                        // wrong icon and message
+                        document.getElementById('wrongFontIcon').style.display = 'flex';
+                        document.getElementById('correctFontIcon').style.display = 'none';
+                        document.getElementById('correctMessgae').style.display = 'none';
+                        document.getElementById('wrongMessgae').style.display = 'flex';
+                        document.getElementById('correctAnsMessage').innerHTML = document.getElementById(ansEle).value
+                        document.getElementById('correctAnsMessage').style.display = 'flex';
+                    }
+
+
+                }
+
+
+            }
+            // }
+        } else if (document.getElementById('buttonCheck').innerHTML.localeCompare('Continue') == 0) {
+            //document.getElementById('buttonCheck').innerHTML='Continue';
+            console.log('temDisplayDivIndex :: ', temDisplayDivIndex);
+
+            if (temDisplayDivIndex != 12) {
+                if (document.getElementById('option_word_type' + (temDisplayDivIndex + 1)).value == 'Pair Matching Question Answer') {
+                    console.log('=====> found option_word_type Pair Matching Question Answer : ', (temDisplayDivIndex + 1));
+                    // display none hr
+                    document.getElementById('hrLine').style.display = 'none';
+
+                    tempPair = document.getElementById('answer' + (temDisplayDivIndex + 1)).value;
+                    console.log('tempPair inside check :: ', tempPair);
+                    var res = tempPair.split(",");
+                    console.log("res :: ", res);
+                    arrPairData = [];
+                    temparrPairData = [];
+                    myPairData = {};
+                    for (var index = 0; index < res.length - 1; index = index + 2) {
+                        myPairData = {};
+                        myPairData.pairWord = res[index];
+                        myPairData.pairAns = res[index + 1];
+                        arrPairData.push(myPairData);
+                        myPairData = {};
+                        myPairData.pairWord = res[index + 1];
+                        myPairData.pairAns = res[index];
+                        arrPairData.push(myPairData);
+                    }
+                    console.log("arrPairData inside check.:", arrPairData);
+                    //temparrPairData=arrPairData.slice();
+                    console.log('arrPairData length inside check :', arrPairData.length);
+
+                } else if (document.getElementById('option_word_type' + (temDisplayDivIndex + 1)).value == 'Type Question Answer') {
+                    // display none hr
+                    document.getElementById('hrLine').style.display = 'none';
+                } else {
+                    document.getElementById('hrLine').style.display = 'flex';
+                }
+
+                document.getElementById('ans_word').innerHTML = "";
+
+                var eleDivContinue = 'option_word' + temDisplayDivIndex;
+                document.getElementById(eleDivContinue).style.display = 'none';
+                document.getElementById('question' + temDisplayDivIndex).style.display = 'none';
+                var eleDivShowContinue = 'option_word' + (temDisplayDivIndex + 1);
+                console.log('eleDivShowContinue :: ', eleDivShowContinue);
+                document.getElementById('question' + (temDisplayDivIndex + 1)).style.display = 'flex';
+                document.getElementById(eleDivShowContinue).style.display = 'flex';
+
+                temDisplayDivIndex = temDisplayDivIndex + 1;
+
+                document.getElementById('correctFontIcon').style.display = 'none';
+                document.getElementById('wrongFontIcon').style.display = 'none';
+                document.getElementById('correctMessgae').style.display = 'none';
+                document.getElementById('wrongMessgae').style.display = 'none';
+                document.getElementById('correctAnsMessage').style.display = 'none';
+
+                document.getElementById('buttonCheck').innerHTML = 'Check'
+
+            }
+
+
+        }
+
+
+
+
+
+    }
+</script>
+
+</html>
